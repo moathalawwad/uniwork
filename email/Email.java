@@ -5,6 +5,7 @@ public class Email{
 		int at = email.indexOf("@");
 		int at1 = email.indexOf("@",at+1);
 		int dot = email.indexOf(".");
+	
 		 if (at!=-1){
 			 if (at1==-1){
 				 if (pass.length()>=8){
@@ -12,6 +13,13 @@ public class Email{
 					  if (dolar != -1){
 							if(email.charAt(0)==pass.charAt(0)){
 								if(dot!=-1){//there is some errors with email contains dots !! 
+								 for (int i = dot;i<at;i++ ){
+									 
+									 	int dot1 = email.indexOf(".",dot+i);
+									 dot=dot1;
+									 
+									 
+								 }
 									System.out.println("accepted");
 									String domain = email.substring(at +1 , dot);
 									System.out.println("your domain is : "+domain);
