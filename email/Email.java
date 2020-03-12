@@ -13,7 +13,7 @@ public class Email{
 					  if (dolar != -1){
 							if(email.charAt(0)==pass.charAt(0)){
 								if(dot!=-1){//there is some errors with email contains dots !! 
-								 for (int i = dot;i<at;i++ ){
+								 for (int i=1 ;i<at;i++ ){
 									 
 									 	int dot1 = email.indexOf(".",dot+i);
 									 dot=dot1;
