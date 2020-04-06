@@ -1,14 +1,15 @@
 import java.io.*; 
+import java.text.DecimalFormat;
 class Counter{
 String text;
- Counter(String t){
+ Counter(String text){
 	 
-	 text=t;
+	 this.text=text;
 	 
  }
  void CountTheLeters(char x , char X){
 	 double total=0;
-	 double count = 0;
+	 int count = 0;
 		//String test = "aa bb cds lol kj my dude";
 		try{
 		FileReader paragraph = new FileReader(text);
@@ -26,7 +27,9 @@ String text;
 	
 			str = br.readLine();
 				}
-					System.out.println("the count for " +x+" = "+count + " the usage percantage is ="+(count/total)*100 );
+				double pere = (count/total)*100;
+				  pere =Double.parseDouble(new DecimalFormat("##.##").format(pere));
+					System.out.println("the count for " +x+" = "+count + " the usage percantage is ="+ pere);
 					
 			
 		}
